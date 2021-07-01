@@ -1,0 +1,21 @@
+@import '@abstracts/colors';
+
+.p-sidebar {
+    font-family: 'Barlow Regular', sans-serif;
+    background: rgb(44,18,21);
+    background: linear-gradient(90deg, rgba(44,18,21,1) 0%, rgba(44,18,21,0.5522584033613445) 100%);
+    border-right: 1px solid $coral-red;
+    .p-sidebar-close {
+        color: $skyblue !important;
+        &:enabled:hover {
+            background: transparent !important;
+        }
+    }
+    .p-sidebar-icon {
+        border-radius: 0 !important;
+        &:focus {
+            box-shadow: 0 0 0.3rem $skyblue !important;
+            border: 1px solid $skyblue;
+        }
+    }
+}

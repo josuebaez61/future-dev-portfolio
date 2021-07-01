@@ -1,0 +1,11 @@
+@import '@abstracts/colors';
+
+.progress {
+    background-color: $dark-red;
+    border-radius: 0;
+    border: 1px solid $coral-red;
+    .progress-bar {
+        color: $dark-red;
+        background-color: $coral-red;
+    }
+}

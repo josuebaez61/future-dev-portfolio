@@ -1,0 +1,23 @@
+@import '@utils/cleaning';
+@import '@abstracts/colors';
+
+ul {
+    @extend .reset-list;
+    li {
+        text-transform: uppercase;
+        a {
+            padding: 3px 5px 3px 5px;
+            display: inline-block;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: $coral-red;
+            width: 100%;
+            border: 1px solid transparent;
+        }
+        .active {
+            background-color: $dark-blue;
+            color: $skyblue;
+            border: 1px solid $skyblue;
+        }
+    }
+}

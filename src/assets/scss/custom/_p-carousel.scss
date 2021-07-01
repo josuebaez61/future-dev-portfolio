@@ -1,0 +1,24 @@
+@import '@abstracts/colors';
+
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator {
+    border: 1px solid $coral-red;
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator button {
+    background-color: $dark-red;
+}
+.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+    background-color: $coral-red;
+}
+
+.p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next {
+    color: $coral-red;
+    &:enabled:hover {
+        background-color: $coral-red;
+        color: $dark-red;
+    }
+    &:focus {
+        box-shadow: 0 0 0 0.2rem $coral-red;
+    }
+}

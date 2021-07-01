@@ -1,0 +1,17 @@
+@import '@abstracts/colors';
+
+$fontSize: 0.5rem;
+
+div {
+    font-size: $fontSize;
+}
+
+span {
+    display: inline-block;
+    font-size: $fontSize;
+}
+
+.withBackground {
+    background-color: $skyblue;
+    color: $dark-blue;
+}

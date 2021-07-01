@@ -1,0 +1,56 @@
+@import '@abstracts/colors';
+@import '@utils/cutting-corners';
+
+$radius       : 0.25rem;
+$header-radius: calc(#{$radius} - 1px);
+
+.card {
+    border          : 1px solid $brown-red;
+    border-radius   : 0;
+    background-color: $dark-red-low-op;
+
+    .card-header:first-child {
+        border-radius   : 0;
+        background-color: $brown-red;
+    }
+}
+
+.card--radius-top-left {
+    border-top-left-radius: $radius;
+
+    .card-header:first-child {
+        border-top-left-radius: $header-radius;
+    }
+}
+
+.card--cut-bottom-right {
+    @extend .cut-corner-bottom-right;
+
+    &::before {
+        content   : '';
+        position  : absolute;
+        width     : 16px;
+        height    : 1px;
+        background: $brown-red;
+        ;
+        transform: rotate(-45deg);
+        bottom   : 5px;
+        right    : -3px;
+    }
+}
+
+.card--cut-bottom-left {
+    @extend .cut-corner-bottom-left;
+
+    &::before {
+        content   : '';
+        position  : absolute;
+        width     : 16px;
+        height    : 1px;
+        background: $brown-red;
+        ;
+        transform: rotate(45deg);
+        bottom   : 5px;
+        left     : -3px;
+    }
+}
