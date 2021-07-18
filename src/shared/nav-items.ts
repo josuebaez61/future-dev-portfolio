@@ -9,7 +9,7 @@ const navItems: any[] = [
     },
     {
         title: 'exp. laboral',
-        path: '/works'
+        path: '/jobs'
     },
     {
         title: 'contacto',

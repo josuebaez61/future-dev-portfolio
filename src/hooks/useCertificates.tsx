@@ -11,7 +11,7 @@ export const useCertificates = () => {
         db.collection('certificates').get().then((querySnapshot) => {
             setCertificates(querySnapshot.docs.map(d => ({ ...d.data(), id: d.id } as Certificate)))
         }).finally(() => setLoading(false));
-    }, []);
+    }, [db]);
     return {
         loading,
         certificates

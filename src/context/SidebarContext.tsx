@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
-export interface SidebarContext {
+export interface SidebarContextInterface {
     sidebarIsVisible: boolean;
     setSidebarIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const SidebarContext = React.createContext<SidebarContext>({} as SidebarContext);
+export const SidebarContext = React.createContext<SidebarContextInterface>({} as SidebarContextInterface);

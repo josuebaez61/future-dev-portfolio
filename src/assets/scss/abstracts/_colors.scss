@@ -14,3 +14,7 @@ $disable-skyblue: #3F6566;
 $disable-blue: #424868;
 $disable-dark-blue: #1C121A;
 
+.bg-skyblue {
+    background-color: $skyblue;
+    color: $blue;
+}

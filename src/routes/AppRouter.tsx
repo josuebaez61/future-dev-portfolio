@@ -3,15 +3,14 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect
 } from "react-router-dom";
 import AppNavbar from "../shared/AppNavbar/AppNavbar";
 import Home from "../views/Home/Home";
 import Projects from "../views/Projects/Projects";
-import { Sidebar } from 'primereact/sidebar';
 import AppSidebar from "../shared/AppSidebar/AppSidebar";
 import { SidebarContext } from "../context/SidebarContext";
+import Jobs from "../views/Jobs/Jobs";
 
 const AppRouter = () => {
   const [sidebarIsVisible, setSidebarIsVisible] = useState(false);
@@ -31,6 +30,7 @@ const AppRouter = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/projects" component={Projects} />
+          <Route exact path="/jobs" component={Jobs} />
           <Redirect to="/" />
         </Switch>
       </div>

@@ -5,7 +5,7 @@ import NavbarDivider from '../../components/NavbarDivider/NavbarDivider';
 import './AppNavbar.scoped.scss';
 import navItems from '../nav-items';
 import { SidebarContext } from '../../context/SidebarContext';
-import imageLogo from '~/assets/images/future-single-logo.png';
+// import imageLogo from '~/assets/images/future-single-logo.png';
 
 const AppNavbar = () => {
 

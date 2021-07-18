@@ -29,7 +29,7 @@ const RandomCode = ({
         return () => {
             clearInterval(intervalRef)
         }
-    }, [])
+    }, [interval, length])
 
     return (
         <div style={{

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { Sidebar } from 'primereact/sidebar';
 import { SidebarContext } from '../../context/SidebarContext';
 import futureLogo from '~/assets/images/future-logo.png';

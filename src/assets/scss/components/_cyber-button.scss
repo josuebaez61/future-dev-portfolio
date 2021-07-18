@@ -1,0 +1,31 @@
+@import '@abstracts/colors';
+@import '@utils/cutting-corners';
+
+.btn-cyber {
+    text-align: start;
+    background-color: transparent;
+    padding: 10px;
+    border: 0;
+    position: relative
+}
+
+.btn-cyber-skyblue {
+    @extend .cut-corner-bottom-right;
+    color: $skyblue;
+    border: 1px solid $skyblue;
+    &:hover {
+        background: $skyblue;
+        color: $blue;
+    }
+    &::before {
+        content   : '';
+        position  : absolute;
+        width     : 17px;
+        height    : 1px;
+        background: $skyblue;
+        ;
+        transform: rotate(-45deg);
+        bottom   : 5px;
+        right    : -3px;
+    }
+}

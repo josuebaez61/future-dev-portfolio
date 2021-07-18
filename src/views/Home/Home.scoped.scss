@@ -1,0 +1,20 @@
+@import '@abstracts/colors';
+
+.profile-aside-card {
+    height: 100%;
+    .profile-aside-card__profile-data-list {
+        list-style-type: square;
+    }
+
+    .social-networks-container {
+        h5 {
+            margin-bottom: 10px;
+        }
+        a {
+            color: $blue;
+            &:hover {
+                color: unset !important;
+            }
+        }
+    }
+}
