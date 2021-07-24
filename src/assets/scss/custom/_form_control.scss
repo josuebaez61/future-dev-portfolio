@@ -1,0 +1,19 @@
+@import '@abstracts/colors';
+
+.form-control {
+    border-radius: 0px;
+    border-color: $coral-red;
+    background-color: $dark-red;
+    color: $skyblue;
+    &:focus {
+        color: $sea-green;
+        background-color: $dark-green;
+        border-color: $sea-green;
+        &::placeholder {
+            color: $sea-green;
+        }
+    }
+    &::placeholder {
+        color: $coral-red;
+    }
+}

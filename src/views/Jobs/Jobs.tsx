@@ -18,7 +18,7 @@ const Jobs = () => {
                         <div className="row row-cols-1 row-cols-md-2 g-4">
                         {
                             jobs.map(job =>
-                                <div className="col animate__animated animate__zoomIn animate__faster">
+                                <div key={job.id} className="col animate__animated animate__zoomIn animate__faster">
                                     <div className="card mb-3" >
                                         <div className="row g-0">
                                             <div className="col-md-4">
@@ -30,7 +30,7 @@ const Jobs = () => {
                                                     <p className="card-text">{job.description}</p>
                                                     <p className="card-text">
                                                         {job.techs.map((tech, index) =>
-                                                            <span className={
+                                                            <span key={`${job.id + '_' + tech}`} className={
                                                                 `badge rounded-pill bg-skyblue ${(index !== (job.techs.length - 1)) ? 'mx-1' : 'ms-1'}`
                                                             }>
                                                                 {tech}

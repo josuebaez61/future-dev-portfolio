@@ -11,6 +11,7 @@ import Projects from "../views/Projects/Projects";
 import AppSidebar from "../shared/AppSidebar/AppSidebar";
 import { SidebarContext } from "../context/SidebarContext";
 import Jobs from "../views/Jobs/Jobs";
+import Contact from "../views/Contact/Contact";
 
 const AppRouter = () => {
   const [sidebarIsVisible, setSidebarIsVisible] = useState(false);
@@ -31,6 +32,7 @@ const AppRouter = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/jobs" component={Jobs} />
+          <Route exact path="/contact" component={Contact} />
           <Redirect to="/" />
         </Switch>
       </div>
