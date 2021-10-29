@@ -11,10 +11,10 @@ const navItems: any[] = [
         title: 'exp. laboral',
         path: '/jobs'
     },
-    {
-        title: 'contacto',
-        path: '/contact'
-    },
+    // {
+    //     title: 'contacto',
+    //     path: '/contact'
+    // },
 ];
 
 export default navItems;

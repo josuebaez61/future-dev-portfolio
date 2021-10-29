@@ -20,13 +20,13 @@ const Contact = () => {
     }
 
     return (
-        <div className="container pb-3 pt-3">
+        <main className="container pb-3 pt-3">
             <div className="row justify-content-center">
                 <div className="col-12 col-md-6">
-                    <div className="card animate__animated animate__zoomIn animate__faster">
-                        <div className="card-header">
+                    <section className="card animate__animated animate__zoomIn animate__faster">
+                        <header className="card-header">
                             CONTACT
-                        </div>
+                        </header>
                         <div className="card-body">
                             <h4 className="text-center card-title">FORMULARIO DE CONTACTO</h4>
                             <form onSubmit={ onSubmit }>
@@ -39,6 +39,7 @@ const Contact = () => {
                                         type="email"
                                         className="form-control"
                                         id="email"
+                                        placeholder="Dejá tu correo electrónico 📧"
                                         required
                                     />
                                 </div>
@@ -49,7 +50,7 @@ const Contact = () => {
                                         onChange={ handleChange }
                                         name="message"
                                         className="form-control"
-                                        placeholder="Deja tu mensaje acá 😉" 
+                                        placeholder="Dejá tu mensaje acá 😉" 
                                         id="message"
                                         required
                                         rows={8}
@@ -74,10 +75,10 @@ const Contact = () => {
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }
 

@@ -1,33 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Chart } from 'primereact/chart';
 import { ChartData } from 'chart.js';
 import { ChartOptions } from 'chart.js';
+import { useDevelopmentTechs } from '../../hooks/useDevelopmentTechs';
+import LoadingCard from '../LoadingCard.tsx/LoadingCard';
 const SkillsRadarChart = () => {
-    const chartData: ChartData = {
-        labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
-        datasets: [
-            // {
-            //     label: 'My First dataset',
-            //     backgroundColor: 'rgba(179,181,198,0.2)',
-            //     borderColor: 'rgba(179,181,198,1)',
-            //     pointBackgroundColor: 'rgba(179,181,198,1)',
-            //     pointBorderColor: '#fff',
-            //     pointHoverBackgroundColor: '#fff',
-            //     pointHoverBorderColor: 'rgba(179,181,198,1)',
-            //     data: [65, 59, 90, 81, 56, 55, 40]
-            // },
-            {
-                label: 'My Second dataset',
-                backgroundColor: 'rgba(255,99,132,0.2)',
-                borderColor: 'rgba(255,99,132,1)',
-                pointBackgroundColor: 'rgba(255,99,132,1)',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgba(255,99,132,1)',
-                data: [28, 48, 40, 19, 96, 27, 100]
-            }
-        ],
-    };
+    const [chartData, setChartData] = useState<ChartData>(Object.create(null))
+    const [labels, setLabels] = useState<string[]>([])
+    const [data, setData] = useState<number[]>([])
+    const { techs, loading } = useDevelopmentTechs()
+
+    useEffect(() => {
+        setLabels(techs.map(el => el.label))
+        setData(techs.map(el => el.value))
+    }, [techs])
+
+    useEffect(() => {
+        setChartData({
+            labels,
+            datasets: [
+                {
+                    label: 'Development Technologies Skills',
+                    backgroundColor: 'rgba(255,99,132,0.2)',
+                    borderColor: 'rgba(255,99,132,1)',
+                    pointBackgroundColor: 'rgba(255,99,132,1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(255,99,132,1)',
+                    data
+                }
+            ]
+        })
+    }, [labels, data] )
 
     const lightOptions: ChartOptions = {
         plugins: {
@@ -53,7 +57,13 @@ const SkillsRadarChart = () => {
         }
     };
     return (
-        <Chart type="radar" data={chartData} options={lightOptions} style={{ position: 'relative', width: '100%' }} />
+        < >
+            {
+                loading
+                    ? <LoadingCard />
+                    : <Chart type="radar" data={chartData} options={lightOptions} style={{ position: 'relative', width: '100%' }} />
+            }
+        </>
     )
 }
 

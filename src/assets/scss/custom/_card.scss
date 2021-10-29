@@ -13,6 +13,13 @@ $header-radius: calc(#{$radius} - 1px);
         border-radius   : 0;
         background-color: $brown-red;
     }
+
+    &.gh-card {
+        border          : 1px solid $sea-green;
+        color           : $sea-green;
+        background-color: $dark-green;
+    }
+
 }
 
 .card--radius-top-left {
