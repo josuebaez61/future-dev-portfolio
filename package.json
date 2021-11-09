@@ -1,6 +1,6 @@
 {
-  "name": "cyber-portfolio-react",
-  "version": "0.1.0",
+  "name": "future-dev-portfolio",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.2",
